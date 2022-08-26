@@ -3,7 +3,7 @@
 Context menu for Flutter projects.
 
 Overview:
-![img.png](https://github.com/starchykov/context_menu/blob/main/assets/Screenshot_1661554576.png?raw=true "Screenshot")
+<img alt="img.png" src="https://github.com/starchykov/context_menu/blob/main/assets/Screenshot_1661554576.png" width="400"/>
 
 Basic Usage:
 ```
