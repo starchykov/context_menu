@@ -134,15 +134,20 @@ class _GridDemoPhotoItem extends StatelessWidget {
       child: ContextMenu(
         bottomOffsetHeight: 8,
         menuWidth: MediaQuery.of(context).size.width * .5,
-        borderRadius: 8,
+        borderRadius: 10,
         actions: [
           ContextMenuAction(title: 'Share', icon: CupertinoIcons.share, onPress: () {}),
           ContextMenuAction(title: 'Copy', icon: CupertinoIcons.doc_on_clipboard, onPress: () {}),
-          ContextMenuAction(title: 'Delete', icon: CupertinoIcons.delete, negativeAction: true, onPress: () {})
+          ContextMenuAction(title: 'Delete', icon: CupertinoIcons.delete, negativeAction: true, onPress: () {}),
+          ContextMenuAction(title: 'Select', icon: CupertinoIcons.check_mark_circled, onPress: () {}),
         ],
-        child: Image(
-          fit: BoxFit.cover,
-          image: NetworkImage(photo.assetName),
+        child: Container(
+          clipBehavior: Clip.antiAlias,
+          decoration: const BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10))),
+          child: Image(
+            fit: BoxFit.cover,
+            image: NetworkImage(photo.assetName),
+          ),
         ),
       ),
     );

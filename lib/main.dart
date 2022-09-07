@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CupertinoApp(
       debugShowCheckedModeBanner: false,
+      theme: CupertinoThemeData(brightness: Brightness.light),
       home: GalleryPage(),
     );
   }
